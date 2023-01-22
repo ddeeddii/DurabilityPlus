@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "durabilityplus",
+  "version": "${version}",
+  "name": "DurabilityPlus",
+  "description": "Simple durability tooltips.",
+  "authors": [
+    "ddeeddii"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/durability-plus/",
+    "sources": "https://github.com/ddeeddii/DurabilityPlus",
+    "issues": "https://github.com/ddeeddii/DurabilityPlus/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/durabilityplus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.ddeeddii.durabilityplus.client.DurabilityPlusClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.10",
+    "fabric-api": "*",
+    "minecraft": "1.19.2"
+  },
+  "custom": {
+    "modmenu": {
+      "id": "com.ddeeddii.durabilityplus",
+      "name": "Durability Plus",
+      "description": "Adds simple and minimal durability tooltips",
+      "icon": "assets/durabilityplus/icon.png"
+    }
+  }
+}

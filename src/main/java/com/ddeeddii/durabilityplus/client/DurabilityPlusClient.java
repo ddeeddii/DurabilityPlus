@@ -5,14 +5,14 @@ import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class DurabilityPlusClient implements ClientModInitializer {
-    public static final Logger LOGGER = LoggerFactory.getLogger("durabilityplus");
+    public static final Logger LOGGER = LogManager.getLogger("durabilityplus");
 
     @Override
     public void onInitializeClient() {
@@ -21,7 +21,7 @@ public class DurabilityPlusClient implements ClientModInitializer {
                 return;
             }
 
-            lines.add(Text.empty());
+            lines.add(Text.of(""));
             lines.add(TooltipHandler.GetTooltip(stack));
         });
 

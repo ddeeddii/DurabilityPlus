@@ -20,11 +20,11 @@ public class TooltipHandler {
         int maxDurability = stack.getMaxDamage();
         int currentDurability = maxDurability - stack.getDamage();
 
-        MutableText currentDurabilityText = Text.literal(String.valueOf(currentDurability))
+        MutableText currentDurabilityText = Text.of(String.valueOf(currentDurability)).copy()
                 .formatted(GetFormattingForTooltip(maxDurability, currentDurability));
-        MutableText slashText = Text.literal(" / ")
+        MutableText slashText = Text.of(" / ").copy()
                 .formatted(Formatting.GRAY);
-        MutableText maxDurabilityText = Text.literal(String.valueOf(maxDurability))
+        MutableText maxDurabilityText = Text.of(String.valueOf(maxDurability)).copy()
                 .formatted(Formatting.GRAY);
 
         return currentDurabilityText.append(slashText).append(maxDurabilityText);

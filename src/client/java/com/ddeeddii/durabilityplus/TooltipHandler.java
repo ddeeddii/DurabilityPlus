@@ -1,4 +1,4 @@
-package com.ddeeddii.durabilityplus.client;
+package com.ddeeddii.durabilityplus;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.MutableText;
